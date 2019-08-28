@@ -272,13 +272,18 @@ return to the previous window."
               :map comma-mode-map
               ("x g" . gofmt)))
 
+(use-package base16-theme
+  :init
+  (load-theme 'base16-materia t))
+
+(use-package magit)
+
 
 ;; START: Stays within init.el
 (global-set-key (kbd "M-/") 'hippie-expand)
 (if (display-graphic-p)
     (progn
-      (global-set-key (kbd "C-,") 'comma-mode)
-      (load-theme 'base16-porple t))
+      (global-set-key (kbd "C-,") 'comma-mode))
   (progn
     (load-theme 'misterioso t)
     (global-set-key (kbd "C-c ,") 'comma-mode)))
@@ -461,6 +466,7 @@ in the `*compilation*'."
      ("#A75B00" . 70)
      ("#F309DF" . 85)
      ("#3C3D37" . 100))))
+ '(hl-sexp-background-color "#efebe9")
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
