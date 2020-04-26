@@ -63,8 +63,6 @@ compinit
 #
 ################################################################################
 
-export PATH="/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/lib/python3.6/site-packages:$PATH"
-export GOPATH="$HOME/Code/go"
 export AGKOZAK_PROMPT_DIRTRIM=6
 
 ################################################################################
@@ -73,8 +71,12 @@ export AGKOZAK_PROMPT_DIRTRIM=6
 #
 ################################################################################
 
-alias ll='ls -alF --color'
-alias ef='emacsclient -t'
+## This one is for Mac OSX that doesn't support long options.  Namely,
+## there is no --color but uses -G instead.
+alias ll='ls -alFG'
+
+## Uncomment this one for a Linux system
+# alias ll='ls -alF --color'
 
 ################################################################################
 #
@@ -96,7 +98,4 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
 ################################################################################
 
-source $HOME/.dot-config/most.zsh
-source $HOME/.dot-config/tmux.zsh
-source $HOME/.dot-config/emacs.zsh
 source $HOME/.dot-config/agkozak-zsh-prompt.plugin.zsh
