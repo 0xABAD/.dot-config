@@ -99,3 +99,19 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ################################################################################
 
 source $HOME/.dot-config/agkozak-zsh-prompt.plugin.zsh
+
+
+################################################################################
+#
+#                              CentOS 7
+#
+################################################################################
+
+# The following require Software Collections Repository to be installed with
+# CentOS.  Do so with:  yum install centos-release-scl
+#
+# After install you still need to find and install the package through YUM
+# and then enable it inside of a shell instance.
+
+# source /opt/rh/devtoolset-9/enable # Enable gcc 9
+# source /opt/rh/sclo-git25/enable   # Enable git version 2.5
